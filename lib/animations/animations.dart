@@ -6,14 +6,14 @@ class OffsetAnimation extends StatefulWidget {
       this.child,
       this.hideNavigationBar,
       this.navBarHeight,
-      this.onAnimationComplete,
+      // this.onAnimationComplete,
       this.extendedLength = false})
       : super(key: key);
   final Widget? child;
   final bool? hideNavigationBar;
   final double? navBarHeight;
   final bool extendedLength;
-  final Function(bool, bool)? onAnimationComplete;
+  // final Function(bool, bool)? onAnimationComplete;
 
   @override
   _OffsetAnimationState createState() => _OffsetAnimationState();
@@ -39,10 +39,10 @@ class _OffsetAnimationState extends State<OffsetAnimation>
 
     _hideAnimation();
 
-    _navBarHideAnimationController.addListener(() {
-      widget.onAnimationComplete!(_navBarHideAnimationController.isAnimating,
-          _navBarHideAnimationController.isCompleted);
-    });
+    // _navBarHideAnimationController.addListener(() {
+    //   widget.onAnimationComplete!(_navBarHideAnimationController.isAnimating,
+    //       _navBarHideAnimationController.isCompleted);
+    // });
   }
 
   @override
